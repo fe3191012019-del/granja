@@ -77,7 +77,35 @@
         </ul>
 
     </li>
+        <!-- Ventas -->
 
+        <li class="dropdown">
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                Ventas
+
+                <span class="caret"></span>
+
+            </a>
+
+            <ul class="dropdown-menu">
+
+                <li>
+                    <a href="ventas/nuevaVenta.jsp">
+                        Facturar
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ventas/listarVentas.jsp">
+                        Listado de Ventas
+                    </a>
+                </li>
+
+            </ul>
+
+        </li>           
     <!-- Consultas -->
 
     <li class="dropdown">

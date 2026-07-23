@@ -35,8 +35,13 @@
                 dbpassword = rs.getString("password");
 
                 if (email.equals(dbemail) && password.equals(dbpassword)) {
-                    session.setAttribute("login", dbemail); //session name is login and store fetchable database email address
-                    response.sendRedirect("Menu.jsp"); //after login success redirect to welcome.jsp page
+
+                    session.setAttribute("login", dbemail);
+                    session.setAttribute("id_usuario", rs.getInt("id"));
+                    session.setAttribute("nombre_usuario",
+                    rs.getString("firstname") + " " + rs.getString("lastname"));
+
+                    response.sendRedirect("Menu.jsp");//er login success redirect to welcome.jsp page
                 }
             } else {
                 request.setAttribute("errorMsg", "Datos de Inicio de Sesión INCORRECTOS"); //invalid error message for email or password wrong
